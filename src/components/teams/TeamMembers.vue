@@ -50,6 +50,7 @@ export default {
   },
   created(){
     this.getTeamMembers(this.teamId)
+    console.log(this.$route.query);
   }
 };
 </script>
