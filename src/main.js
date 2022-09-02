@@ -54,6 +54,12 @@ router.beforeEach((to, from, next) => {
   next();
 });
 
+router.afterEach((to,from)=>{
+    //you can use this to send analytics to where your users routed;
+    console.log('Global after each');
+    console.log(to,from);
+})
+
 const app = createApp(App);
 app.use(router);
 app.mount('#app');
