@@ -51,6 +51,11 @@ export default {
   created(){
     this.getTeamMembers(this.teamId)
     console.log(this.$route.query);
+  },
+  beforeRouteUpdate(to,from,next){
+    console.log('Before route update');
+    console.log(to,from);
+    next();
   }
 };
 </script>
